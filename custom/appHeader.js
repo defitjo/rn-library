@@ -3,7 +3,7 @@ import { StyleSheet, View, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { MaterialIcons } from '@expo/vector-icons';
 
-export default function AppHeader() {
+export default function AppHeader({ title }) {
   const navigation = useNavigation();
 
   return (
@@ -15,11 +15,11 @@ export default function AppHeader() {
         style={styles.menuIcon}
       />
       <View>
-        <Text style={styles.headerText}>Deez bOOks</Text>
+        <Text style={styles.headerText}>{ title }</Text>
       </View>
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   header: {
@@ -31,12 +31,13 @@ const styles = StyleSheet.create({
   menuIcon: {
     color: '#fff',
     position: 'absolute',
-    left: 15,
+    left: 12,
   },
   headerText: {
     color: '#fff',
     fontSize: 22,
     fontWeight: 'bold',
     letterSpacing: 1,
+    left: 10,
   },
 });
