@@ -1,5 +1,6 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
+
 import About from '../screens/aboutScreen';
 import AppHeader from '../custom/appHeader';
 
